@@ -1,0 +1,57 @@
+{
+    "name": "a4g",
+    "description": "A4G is an open source library to allow game developers a simple way to add analytics to a game",
+    "copyright": "Copyright © 2014, Colden Cullen and Daniel Jost",
+    "license": "MIT",
+    "authors": [
+        "Colden Cullen",
+        "Daniel Jost"
+    ],
+
+    "subPackages": [
+        {
+            "name": "common",
+
+            "importPaths": [ "./common" ],
+            "sourcePaths": [ "./common" ],
+
+            "dependencies": {
+                "vibe-d": "==0.7.21"
+            },
+
+            "targetName": "a4g",
+            "targetType": "sourceLibrary"
+        },
+        {
+            "name": "client",
+
+            "importPaths": [ "./client" ],
+            "sourcePaths": [ "./client" ],
+
+            "dependencies": {
+                "a4g:common": "*"
+            },
+
+            "targetName": "a4g",
+            "targetType": "library"
+        },
+        {
+            "name": "server",
+
+            "importPaths": [ "./server" ],
+            "sourcePaths": [ "./server" ],
+
+            "dependencies": {
+                "a4g:common": "*"
+            },
+
+            "targetName": "a4g-server",
+            "targetType": "executable"
+        }
+    ],
+
+    "dependencies": {
+        "a4g:client": "*",
+        "a4g:server": "*"
+    }
+}
