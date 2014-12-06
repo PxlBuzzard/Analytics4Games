@@ -15,5 +15,5 @@ interface A4GWebInterface
     void store( string key, DataEntry data );
 
     @method(HTTPMethod.GET)
-    DataEntry[] find( string key );
+    DataEntry[] retrieve( string key );
 }
