@@ -45,6 +45,10 @@
                 "a4g:common": "*"
             },
 
+            "versions": [
+                "VibeDefaultMain"
+            ],
+
             "targetName": "a4g-server",
             "targetType": "executable"
         }

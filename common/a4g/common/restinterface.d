@@ -12,8 +12,8 @@ struct DataEntry
 interface A4GWebInterface
 {
     @method(HTTPMethod.POST)
-    void storeData( string key, DataEntry data );
+    void store( string key, DataEntry data );
 
     @method(HTTPMethod.GET)
-    DataEntry[] getData( string key );
+    DataEntry[] find( string key );
 }
